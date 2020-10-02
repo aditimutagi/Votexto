@@ -22,5 +22,5 @@ bin/pip install -r requirements.txt
 ```
 ## Run program:
 + Run file (`python process_text.py`)
-+ Run following in a different terminal window: `twilio phone-numbers:update "+<your_twilio_number>" --sms-url="http://localhost:5000/"`
++ Run following in a different terminal window: `twilio phone-numbers:update "+13342581763" --sms-url="http://localhost:5000/"`
 + Bot is active! Begin the conversation with "Hello" (capitalization doesn't matter, but the message can only contain that one word).
