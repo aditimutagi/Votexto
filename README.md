@@ -10,8 +10,8 @@ A text bot that provides election information based on a given zip code.
 + Update node (`sudo n stable`) and get the twilio CLI tools `npm install twilio-cli -g`
 + Set Twilio environment variables:
 ```
-export TWILIO_ACCOUNT_SID=<YOUR_INFO>
-export TWILIO_AUTH_TOKEN=<YOUR_INFO>
+export TWILIO_ACCOUNT_SID=ACb0ddafbfd39216658f9e25f5924cb067
+export TWILIO_AUTH_TOKEN=877811963def53468433bd66b43d2bb8
 ```
 + Activate virtualenv and get dependencies
 ```
