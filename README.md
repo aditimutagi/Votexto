@@ -21,23 +21,23 @@ source bin/activate
 bin/pip install -r requirements.txt
 ```
 ## Run program:
-**python files are not linked together, run independently of each other as of now
+Python files are not linked together, run independently of each other as of now
 
-+ Run file (`python process_text.py`)
-+ Run following in a different terminal window: `twilio phone-numbers:update "+13342581763" --sms-url="http://localhost:5000/"`
-+ Bot is active! Begin the conversation with "Hello" (capitalization doesn't matter, but the message can only contain that one word).
+* Run file (`python process_text.py`)
+	+ Run following in a different terminal window: `twilio phone-numbers:update "+13342581763" --sms-url="http://localhost:5000/"`
+	+ Bot is active! Begin the conversation with "Hello" (capitalization doesn't matter, but the message can only contain that one word).
 
-+ Run file ('CandidatePlatformInformation.py')
-+ Uses webscraping to retrieve platform information from https://www.ontheissues.org/default.htm
-+ Currently includes information on Democratic and Republican presidential candidates
-+ This algorithm can be applied to retreive non-partisan platform information for presidential, congress, and state elections
+* Run file ('CandidatePlatformInformation.py')
+	+ Uses webscraping to retrieve platform information from https://www.ontheissues.org/default.htm
+	+ Currently includes information on Democratic and Republican presidential candidates
+	+ This algorithm can be applied to retreive non-partisan platform information for presidential, congress, and state elections
 
-+ Run file ('PollingLocations.py')
-+ Uses webscraping of https://voterlookup.elections.ny.gov to automate process of finding polling locations
-+ Allows users to input details requested in form, prints nearest polling location
-+ Currently finds polling locations for New York, can be implemented to other state-specific voting sites
+* Run file ('PollingLocations.py')
+	+ Uses webscraping of https://voterlookup.elections.ny.gov to automate process of finding polling locations
+	+ Allows users to input details requested in form, prints nearest polling location
+	+ Currently finds polling locations for New York, can be implemented to other state-specific voting sites
 
-+ Run file ('VotingRegistration.py')
-+ Uses webscraping of https://voterreg.dmv.ny.gov/MotorVoter/ to automate voter registration 
-+ Allows users to input details requested in form, prints confirmation of registration
-+ Currently allows user to register to vote in New York, can be implemented to other state-specific voting registration sites
+* Run file ('VotingRegistration.py')
+	+ Uses webscraping of https://voterreg.dmv.ny.gov/MotorVoter/ to automate voter registration 
+	+ Allows users to input details requested in form, prints confirmation of registration
+	+ Currently allows user to register to vote in New York, can be implemented to other state-specific voting registration sites
