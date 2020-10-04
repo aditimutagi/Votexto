@@ -11,10 +11,67 @@ app.config.from_object(__name__)
 zip_to_info_dict = {"U.S." : ["N/A", "Presidential election: Nov 3rd, 2020", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A"]}
 
 # dictionary for biden,trump,harris,pence -- UNFINISHED, needs to be updated
-national_platforms = {"B":["Improve the economy", "affordable care act", "don't defund the police"], 
-    "T":["Improve the economy", "affordable care act", "don't defund the police"], 
-    "H":["Improve the economy", "affordable care act", "don't defund the police"],
-    "P":["Improve the economy", "affordable care act", "don't defund the police"]}
+#XXX Add more list items for each of the 4 people
+national_platforms = {"B":["""This summer, Mr. Biden rolled out his own set of economic proposals under the slogan “Build Back Better,” 
+including plans to invest in clean energy and to ensure that procurement spending goes toward American-made products. 
+Mr. Biden is calling for tax increases on corporations and high-earning individuals, but he has said that no one earning
+less than $400,000 would face a tax hike.""", """Mr. Biden spent 36 years as a senator and eight years as vice president, 
+so he has a voluminous record — giving him achievements to brag about, but also leaving him vulnerable over other aspects of 
+his lengthy career.\nMr. Biden can point to accomplishments like the passage of the Violence Against Women Act, as well as 
+the enactment of the Affordable Care Act and his work on the implementation of the 2009 stimulus package.\nMr. Trump has portrayed 
+Mr. Biden’s record in a very different light, and Mr. Biden has faced criticism over a number of votes during the 2020 campaign, 
+including his support for the Iraq war, the 1994 crime bill and NAFTA.""", """Mr. Biden has put a major focus on the virus, 
+condemning Mr. Trump’s handling of the pandemic and making that a central argument as he asks voters to deny the 
+president a second term. That is almost certain to be a major focus of Mr. Biden’s in the debate, too. 
+He has promised a starkly different approach to combating the virus, stressing the importance of deferring to scientific experts,
+and he has called for a national mask mandate.""",
+"""Mr. Biden has pledged to nominate a Black woman to the Supreme Court, though he has declined to follow Mr. Trump’s lead and release a 
+list of potential nominees. He has called for Senate Republicans to hold off on confirming a successor to Justice Ruth Bader Ginsburg 
+until after the election, noting that early voting is already underway.""",
+"""Mr. Biden has repeatedly said that he opposes defunding the police, though Republicans have still falsely claimed that he supports that movement. 
+He has condemned violence as well. Mr. Biden has called for racial healing and pledged to confront systemic racism, a starkly different approach from 
+Mr. Trump’s. In July, Mr. Biden released a plan to address racial inequities in the economy. 
+\nMr. Biden’s message ties back to the origin of his campaign and themes of American values, as he often talks about being motivated to 
+run by Mr. Trump’s comments after the white supremacist rally in Charlottesville, Va., in 2017.""",
+"""Mr. Biden has warned that Mr. Trump is seeking to undermine the legitimacy of the election. 
+"This president is going to try to indirectly steal the election by arguing that mail-in ballots don’t work,” he said in July.
+\nMr. Biden has also warned about possible foreign interference, vowing that as president, he would impose significant consequences 
+for any meddling by foreign powers. Last week, he called Mr. Trump’s refusal to commit to a peaceful transfer of power a 'typical 
+Trump distraction.'"""], 
+    "T":["""Until the pandemic, one of Mr. Trump’s strongest arguments for re-election was the powerful performance of the economy, 
+which had achieved low unemployment, strong growth and a soaring stock market. Following the virus-induced shutdowns, the economy’s 
+growth has stalled and unemployment has soared, even with some recovery in recent months. On the campaign trail, Mr. Trump promises 
+that the economy will recover — and get even better — if he is given a second term. The president has also promised a future tax cut 
+for the middle class, though he has not offered specifics, and he has said he wants to reduce the capital gains tax.""", 
+    """At his campaign rallies, the president focuses on trade, including his renegotiation of the North American Free Trade Agreement, or NAFTA, 
+and imposition of tariffs on China and other countries. He boasts about his 2017 tax cuts and the growth in jobs before the coronavirus pandemic. 
+He cites increases in military funding, his elimination of environmental regulations, peace agreements in the Middle East and actions to shut down 
+immigration.\nMany of the president’s promises fell short, a point that Mr. Biden may highlight. Despite saying he would build a “big, beautiful 
+wall” across the entire border with Mexico, the president has built only about 200 miles of wall, most of it replacements for existing barriers. 
+He failed to repeal the Affordable Care Act, and he has not controlled federal spending.\nIn addition to Mr. Trump’s record in the White House, 
+another issue likely to come up is his taxes. Mr. Trump has refused to release his tax returns, and The New York Times reported on Sunday that he 
+paid only $750 in federal income taxes in 2016 and in 2017.""", """Mr. Trump has repeatedly claimed that his administration’s response to the coronavirus 
+pandemic was exceptional, saying he acted early to impose travel restrictions from China; worked with states to acquire equipment like ventilators; and 
+pushed for the development of treatments and vaccines. Note, however, that the president consistently played down the threat from the virus in the early days 
+when it could have been contained, and ignored or resisted advice from his top health officials. The United States failed to provide enough testing 
+to know how the virus was spreading, and Mr. Trump clashed with governors over the need for protective equipment. There is also mounting evidence 
+of the ways in which Mr. Trump and the White House put immense political pressure on the Centers for Disease Control and Prevention and other health 
+agencies to accept Mr. Trump’s demands that the country reopen more quickly than they thought was safe.""","""The intense push to seat Judge Amy Coney Barrett 
+on the Supreme Court before Election Day is part of the president’s four-year effort to remake the federal judiciary, adding conservative-leaning judges 
+to the bench at all levels. With the help of a Republican-controlled Senate, Mr. Trump is succeeding in that goal.\nThe president has already installed two other Supreme 
+Court justices — Neil M. Gorsuch and Brett M. Kavanaugh — and more than 200 federal district and appeals court judges, shifting the ideological balance 
+for years to come.""","""The president has seized upon unrest over racial justice as a defining difference between him and Mr. Biden, 
+calling the protesters “rioters” and “anarchists” and overtly siding with the police in a bid to cast himself as a “law and order” leader.\nThe president 
+and his campaign are using episodes of violence against the police to generate fear and support among his base. He has called for much more aggressive 
+use of the National Guard to control disturbances, and has dismissed the Black Lives Matter organization as a radical, violent group.\nWhen he is pressed 
+for accomplishments, Mr. Trump cites the First Step Act, which made some reforms to federal sentencing laws, benefiting minorities. The bipartisan bill 
+passed in 2018 and was signed into law by Mr. Trump.\nMr. Trump has attacked Mr. Biden as anti-law enforcement, often in exaggerated terms — though at 
+times the president has also tried to cast him as overly punitive because of his work on the 1994 crime bill that encouraged incarceration.""","""Mr. Trump has 
+spent much of the last year overtly questioning the integrity of the coming election, laying the groundwork for a legal and public relations 
+assault if the initial count shows that he has lost the race.\nThe president’s primary focus in the past several months has been on mail-in ballots, 
+which he claims — without any evidence — are subject to widespread fraud and should not be allowed."""], 
+    "H":["See Joe Biden's Platforms.", "affordable care act", "See Joe Biden's Platforms.","See Joe Biden's Platforms.","See Joe Biden's Platforms.","See Joe Biden's Platforms."],
+    "P":["See Donald Trump's Platforms.", """""", "See Donald Trump's Platforms.","See Donald Trump's Platforms.","See Donald Trump's Platforms.","See Donald Trump's Platforms."]}
 
 # this variable tracks the conversation, the first element will be the main menu level selection
 previous_selections = []
@@ -32,7 +89,7 @@ def readCSV():
                     temp_str = row[i+1] #.decode('utf-8')
                     temp[i] = temp_str.replace("{xe", "\n")
                     #print temp[i]
-                zip_to_info_dict[row[0]] = [temp[0],temp[1],temp[2],temp[3],temp[4],temp[5],temp[6],temp[7],temp[8],temp[9],temp[10]]
+                zip_to_info_dict[row[0]] = [temp[0],temp[1],temp[2],temp[3],temp[4],temp[5],temp[6],temp[7],temp[8],temp[9]]#had temp[10]
             line_count = line_count + 1
 
 def handleOptions(zip, num):
@@ -165,7 +222,16 @@ def handleOptions(zip, num):
                 return national_platforms[who][1]
             if num == "3":
                 previous_selections.append(num)
-                return national_platforms[who][2]
+                return national_platforms[who][2] #XXX Add more if num == 4 etc. etc.
+            if num == "4":
+                previous_selections.append(num)
+                return national_platforms[who][3]
+            if num == "5":
+                previous_selections.append(num)
+                return national_platforms[who][4]
+            if num == "6":
+                previous_selections.append(num)
+                return national_platforms[who][5]
             if num == 'b':
                 previous_selections.pop()
                 return platformMenu()
@@ -223,7 +289,8 @@ def handleOptions(zip, num):
 
 # the following functions are for option 5
 def platformMenu():
-    return "Reply '1' for economy.\nReply '2' for healthcare.\nReply '3' for police.\nReply 'b' to go back.\nReply 'h' to go to the main menu."
+    #XXX Add more items here -- all the related changes should have a comment w XXX
+    return "Reply '1' for Economy.\nReply '2' for Trump’s and Biden’s records\nReply '3' for Coronavirus.\nReply '4' for Supreme Court.\nReply '5' for Race and violence in American cities\nReply '6' for Integrity of Elections.\nReply 'b' to go back.\nReply 'h' to go to the main menu."
 
 def presidential():
     return "Here are your 2020 Presidential candidates:\nJoe Biden (D)\nDonald Trump (R)\nReply '1' for Joe Biden's platforms.\nReply '2' for Donald Trump's platforms.\nReply 'b' to go back.\nReply 'h' to go to the main menu."
@@ -296,7 +363,7 @@ def processText():
     message = ""
     if request.values.get('Body').lower() == "hello":
         # the response to the first hello message.
-        message = "Hi!\n Welcome to Robovote!\nFor area-specific information, please input a zip code. Otherwise, please reply with '0'."
+        message = "Hi! Welcome to Votexto!\nFor area-specific information, please input a zip code. Otherwise, please reply with '0'."
         session['last_hello'] = counter
     elif counter == (session['last_hello'] + 1):
         # the response to the zip code message
