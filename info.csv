@@ -1,2 +1,2 @@
-zip_code,upcoming_elections,senate_races,house_races,local_races
-1001,10-01-2020:house,,,
+zip_code,registration_website,upcoming_elections,polling_place,covid_policies,absentee_policies,mailin_deadlines,congressional_candidates
+10027,https://voterreg.dmv.ny.gov/MotorVoter/,BLAHH,BLAHH,BLAHH,BLAHH,BLAHH,BLAHH
