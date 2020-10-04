@@ -21,7 +21,7 @@ source bin/activate
 bin/pip install -r requirements.txt
 ```
 ## Run program:
-**python files are not linked together, they run independently of each other for now
+**python files are not linked together, run independently of each other as of now
 
 + Run file (`python process_text.py`)
 + Run following in a different terminal window: `twilio phone-numbers:update "+13342581763" --sms-url="http://localhost:5000/"`
