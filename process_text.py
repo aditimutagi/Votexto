@@ -12,10 +12,8 @@ zip_to_info_dict = {"U.S." : ["N/A", "Presidential election: Nov 3rd, 2020", "N/
 
 # dictionary for biden,trump,harris,pence -- UNFINISHED, needs to be updated
 #XXX Add more list items for each of the 4 people
-national_platforms = {"B":["""This summer, Mr. Biden rolled out his own set of economic proposals under the slogan “Build Back Better,” 
-including plans to invest in clean energy and to ensure that procurement spending goes toward American-made products. 
-Mr. Biden is calling for tax increases on corporations and high-earning individuals, but he has said that no one earning
-less than $400,000 would face a tax hike.""", """Mr. Biden spent 36 years as a senator and eight years as vice president, 
+national_platforms = {"B":["""This summer, Mr. Biden rolled out his own set of economic proposals under the slogan 'Build Back Better,' 
+including plans to invest in clean energy and to ensure that procurement spending goes toward American-made products. Mr. Biden is calling for tax increases on corporations and high-earning individuals, but he has said that no one earningless than $400,000 would face a tax hike.""", """Mr. Biden spent 36 years as a senator and eight years as vice president, 
 so he has a voluminous record — giving him achievements to brag about, but also leaving him vulnerable over other aspects of 
 his lengthy career.\nMr. Biden can point to accomplishments like the passage of the Violence Against Women Act, as well as 
 the enactment of the Affordable Care Act and his work on the implementation of the 2009 stimulus package.\nMr. Trump has portrayed 
@@ -39,8 +37,7 @@ run by Mr. Trump’s comments after the white supremacist rally in Charlottesvil
 for any meddling by foreign powers. Last week, he called Mr. Trump’s refusal to commit to a peaceful transfer of power a 'typical 
 Trump distraction.'"""], 
     "T":["""Until the pandemic, one of Mr. Trump’s strongest arguments for re-election was the powerful performance of the economy, 
-which had achieved low unemployment, strong growth and a soaring stock market. Following the virus-induced shutdowns, the economy’s 
-growth has stalled and unemployment has soared, even with some recovery in recent months. On the campaign trail, Mr. Trump promises 
+which had achieved low unemployment, strong growth and a soaring stock market. Following the virus-induced shutdowns, the economy’s growth has stalled and unemployment has soared, even with some recovery in recent months. On the campaign trail, Mr. Trump promises 
 that the economy will recover — and get even better — if he is given a second term. The president has also promised a future tax cut 
 for the middle class, though he has not offered specifics, and he has said he wants to reduce the capital gains tax.""", 
     """At his campaign rallies, the president focuses on trade, including his renegotiation of the North American Free Trade Agreement, or NAFTA, 
@@ -70,8 +67,8 @@ times the president has also tried to cast him as overly punitive because of his
 spent much of the last year overtly questioning the integrity of the coming election, laying the groundwork for a legal and public relations 
 assault if the initial count shows that he has lost the race.\nThe president’s primary focus in the past several months has been on mail-in ballots, 
 which he claims — without any evidence — are subject to widespread fraud and should not be allowed."""], 
-    "H":["See Joe Biden's Platforms.", "affordable care act", "See Joe Biden's Platforms.","See Joe Biden's Platforms.","See Joe Biden's Platforms.","See Joe Biden's Platforms."],
-    "P":["See Donald Trump's Platforms.", """""", "See Donald Trump's Platforms.","See Donald Trump's Platforms.","See Donald Trump's Platforms.","See Donald Trump's Platforms."]}
+    "H":["See Joe Biden's Platforms.", "See Joe Biden's Platforms.", "See Joe Biden's Platforms.","See Joe Biden's Platforms.","See Joe Biden's Platforms.","See Joe Biden's Platforms."],
+    "P":["See Donald Trump's Platforms.", "See Donald Trump's Platforms.", "See Donald Trump's Platforms.","See Donald Trump's Platforms.","See Donald Trump's Platforms.","See Donald Trump's Platforms."]}
 
 # this variable tracks the conversation, the first element will be the main menu level selection
 previous_selections = []
@@ -85,10 +82,10 @@ def readCSV():
         for row in rdr:
             if line_count != 0:
                 temp = ["", "", "","","", "", "","","", ""]
-                for i in range(2):
-                    temp_str = row[i+1] #.decode('utf-8')
+                for i in range(10):
+                    temp_str = row[i+1]#.decode('utf-8')
                     temp[i] = temp_str.replace("{xe", "\n")
-                    #print temp[i]
+                    temp[i] = temp[i].replace("{xy", ",")
                 zip_to_info_dict[row[0]] = [temp[0],temp[1],temp[2],temp[3],temp[4],temp[5],temp[6],temp[7],temp[8],temp[9]]#had temp[10]
             line_count = line_count + 1
 
@@ -158,9 +155,45 @@ def handleOptions(zip, num):
                 return local(zip)
     elif len(previous_selections)==2: #third level
         mainMenuItem = int(previous_selections[0])
-        secondLevelItem = int(previous_selections[1])
-        # Only options 5 reach this layer
-        if mainMenuItem==5:
+        secondLevelItem = int(previous_selections[1])        
+        if mainMenuItem==1:
+            if secondLevelItem == 1: # how to register
+                if num == 'b': # TODO fix
+                    previous_selections.pop()
+                    return getDataWithContextString(zip, 4)+ "\nReply 'b' to go back.\nReply 'h' to go to the main menu."
+                if num == 'h':
+                    previous_selections = []
+                    return getMainMenu()
+        elif mainMenuItem==2:
+            if secondLevelItem == 1: # election timeline
+                if num == 'b':
+                    previous_selections.pop()
+                return "Upcoming elections: " + getDataWithContextString(zip,2) + "\nReply 'b' to go back.\nReply 'h' to go to the main menu."
+                if num == 'h':
+                    previous_selections = []
+                    return getMainMenu()
+        elif mainMenuItem==3:
+            if secondLevelItem == 1: # polling place
+                if num == '1':
+                    previous_selections.append('1')
+                    return "COVID-19 policies:"
+                if num == 'b':
+                    previous_selections.pop()
+                    return getDataWithContextString(zip, 4)+ "\nReply 'b' to go back.\nReply 'h' to go to the main menu."
+                if num == 'h':
+                    previous_selections = []
+                    return getMainMenu()
+        elif mainMenuItem==4: # absentee/mailin -- does this work??
+            if num == 'b':
+                previous_selections.pop()
+                if secondLevelItem ==1:
+                    return getDataWithContextString(zip, 5)+ "\nReply 'b' to go back.\nReply 'h' to go to the main menu."
+                elif secondLevelItem ==2:
+                    return getDataWithContextString(zip, 6)+"\nReply 'b' to go back.\nReply 'h' to go to the main menu."
+            elif num == 'h':
+                previous_selections = []
+                return getMainMenu()
+        elif mainMenuItem==5:
             if secondLevelItem == 1: # presidential
                 if num == "1" or num == "2": # platform of biden or trump
                     previous_selections.append(num)
@@ -353,6 +386,7 @@ def getDataWithContextString(zip, num):
 
 @app.route("/", methods=['GET', 'POST'])
 def processText():
+    global previous_selections
     # Increment the counter
     counter = session.get('counter', 0)
     counter += 1
@@ -365,6 +399,7 @@ def processText():
         # the response to the first hello message.
         message = "Hi! Welcome to Votexto!\nFor area-specific information, please input a zip code. Otherwise, please reply with '0'."
         session['last_hello'] = counter
+        previous_selections = []
     elif counter == (session['last_hello'] + 1):
         # the response to the zip code message
         message = "Thanks!\n" + getMainMenu()
@@ -382,6 +417,7 @@ def processText():
         try:
             optionSelected = request.values.get('Body')
             zip_str = session['zip']
+            print(previous_selections)
             message = handleOptions(zip_str, optionSelected)
             print(previous_selections)
         except ValueError:
