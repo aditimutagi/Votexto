@@ -41,3 +41,8 @@ Python files are not linked together, run independently of each other as of now
 	+ Uses webscraping of https://voterreg.dmv.ny.gov/MotorVoter/ to automate voter registration 
 	+ Allows users to input details requested in form, prints confirmation of registration
 	+ Currently allows user to register to vote in New York, can be implemented to other state-specific voting registration sites
+	
+* Run file ('CovidFeedback.py')
+	+ Uses user input to estimate risk faced by community members going to the same location throughout the day
+	+ Users are prompted to answer a survey about COVID-related risks and safety measures at their polling locations
+	+ These responses will be taken into account to suggest safer polling locations and an estimated waittime for other community members
