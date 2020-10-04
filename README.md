@@ -1,6 +1,6 @@
 # VoteTextBot
 
-A text bot that provides election information based on a given zip code.
+A text bot that provides election information based on a given zip code (for now, test with 11050).
 
 
 ## Initial setup (MacOS)
