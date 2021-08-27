@@ -3,6 +3,9 @@
 A text bot that provides election information based on a given zip code (for now, test with 11050).
 
 
+## UPDATE: 08/27/2021
+	Free trial of Twilio has expired. New authentication ID (Account SID: ACa41a4e93b1085edbf3220ff24a52b8eb), token (3b2f440c4e1146e764c4ef71671f28e3), and phone number (+12678438180) needed to run the code. 
+
 ## Initial setup (MacOS)
 + Get python (nothing additional to run) and twilio (`pip install twilio` or `easy_install twilio`)
 + Get virtualenv (`pip install virtualenv`)
